@@ -61,8 +61,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\LightSwitch.cs" />
     <Compile Include="Assets\SimpleCorridor\Scripts\Door.cs" />
+    <None Include="Assets\USE Basement pack\Read me.txt" />
     <None Include="Assets\SimpleCorridor\README.txt" />
+    <None Include="Assets\USE TV\readme.txt" />
     <Reference Include="Cinemachine">
       <HintPath>D:/TP ÉCOLE/Horror-/Horror/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
