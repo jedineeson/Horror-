@@ -62,10 +62,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\LightSwitch.cs" />
-    <Compile Include="Assets\SimpleCorridor\Scripts\Door.cs" />
-    <None Include="Assets\USE Basement pack\Read me.txt" />
-    <None Include="Assets\SimpleCorridor\README.txt" />
-    <None Include="Assets\USE TV\readme.txt" />
+    <Compile Include="Assets\MagicMirror\Demo\DemoScript.cs" />
+    <Compile Include="Assets\MagicMirror\Prefab\MirrorCameraScript.cs" />
+    <Compile Include="Assets\MagicMirror\Prefab\MirrorReflectionScript.cs" />
+    <Compile Include="Assets\MagicMirror\Prefab\MirrorScript.cs" />
+    <None Include="Assets\MagicMirror\Prefab\MirrorShaderOld.shader" />
+    <None Include="Assets\MagicMirror\Prefab\MirrorShaderBumpMap.shader" />
+    <None Include="Assets\MagicMirror\Prefab\Readme.txt" />
+    <None Include="Assets\MagicMirror\Prefab\MirrorShader.shader" />
     <Reference Include="Cinemachine">
       <HintPath>D:/TP ÉCOLE/Horror-/Horror/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
