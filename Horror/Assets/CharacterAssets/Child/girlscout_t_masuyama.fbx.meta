@@ -142,10 +142,15 @@ ModelImporter:
     7400000: mixamo.com
     9500000: //RootNode
     13700000: GirlScout
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GirlScoutZombie_Material
+    second: {fileID: 2100000, guid: 7000f17949c7cdc4999100ca91e8fb3d, type: 2}
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 1
     materialSearch: 1
     materialLocation: 0
   animations:
