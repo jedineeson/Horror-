@@ -8,11 +8,14 @@ public class LightSwitch : Interactable
     private GameObject m_LightOnObjs;
     [SerializeField]
     private GameObject m_LightOffObjs;
-    [SerializeField]
-    private List<Light> m_Lights;
 
     [SerializeField]
     private bool m_LightIsOn = true;
+    public bool LightIsOn
+    {
+        get { return m_LightIsOn; }
+        set { LightIsOn = value; }
+    }
 
     private void Start()
     {
@@ -32,21 +35,15 @@ public class LightSwitch : Interactable
     {
         if(m_LightIsOn)
         {
+            AudioManager.Instance.PlayMusic("LightOn");
             m_LightOnObjs.SetActive(true);
             m_LightOffObjs.SetActive(false);
-            for(int i = 0; i < m_Lights.Count; i++)
-            {
-                m_Lights[i].enabled = true;
-            }
         }
         else
         {
+            AudioManager.Instance.PlayMusic("LightOff");
             m_LightOnObjs.SetActive(false);
             m_LightOffObjs.SetActive(true);
-            for (int i = 0; i < m_Lights.Count; i++)
-            {
-                m_Lights[i].enabled = false;
-            }
         }
     }
 

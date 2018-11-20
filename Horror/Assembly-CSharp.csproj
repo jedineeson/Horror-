@@ -65,11 +65,15 @@
     <Compile Include="Assets\MagicMirror\Prefab\MirrorCameraScript.cs" />
     <Compile Include="Assets\MagicMirror\Prefab\MirrorReflectionScript.cs" />
     <Compile Include="Assets\MagicMirror\Prefab\MirrorScript.cs" />
+    <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\LightSwitch.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\SFXAudio.cs" />
+    <Compile Include="Assets\Scripts\TriggerMusic.cs" />
+    <Compile Include="Assets\Scripts\TVSnow.cs" />
     <None Include="Assets\MagicMirror\Prefab\MirrorShaderOld.shader" />
     <None Include="Assets\MagicMirror\Prefab\MirrorShaderBumpMap.shader" />
     <None Include="Assets\MagicMirror\Prefab\Readme.txt" />

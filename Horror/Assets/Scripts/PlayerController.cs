@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     private RaycastHit m_Hit;
 
     [SerializeField]
+    private GameObject m_PocketLight;
+
+    [SerializeField]
     private GameObject m_Camera;
 
     [SerializeField]
@@ -23,6 +26,8 @@ public class PlayerController : MonoBehaviour
     private float m_XValue = 0.0f;
     private float m_InputX;
 
+    private bool m_LightIsOn = false;
+
 
     private void Start()
     {
@@ -30,11 +35,12 @@ public class PlayerController : MonoBehaviour
         m_Animator = gameObject.GetComponent<Animator>();
         m_Rigidbody = gameObject.GetComponent<Rigidbody>();
         m_XValue = transform.localEulerAngles.x;
+        UpdatePocketLight();
     }
 
     private void Update()
     {
-        SetInput();
+        GetInput();
         RayCast();
         DebugFunc();
         Animate();
@@ -46,9 +52,15 @@ public class PlayerController : MonoBehaviour
         Move();
     }
 
-    private void SetInput()
+    private void GetInput()
     {
         m_InputX = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKeyDown(KeyCode.O))
+        {
+            m_LightIsOn = !m_LightIsOn;
+            UpdatePocketLight();
+        }
     }
 
     private void Move()
@@ -86,16 +98,28 @@ public class PlayerController : MonoBehaviour
     {
         if (Physics.Raycast(m_Camera.transform.position, m_Camera.transform.forward, out m_Hit, 1))
         {
-            Debug.DrawRay(m_Camera.transform.position, m_Camera.transform.forward*1, Color.red);
+            Debug.DrawRay(m_Camera.transform.position, m_Camera.transform.forward * 1, Color.red);
         }
         else
         {
-            Debug.DrawRay(m_Camera.transform.position, m_Camera.transform.forward*1, Color.green);
+            Debug.DrawRay(m_Camera.transform.position, m_Camera.transform.forward * 1, Color.green);
         }
     }
 
     private void Animate()
     {
         m_Animator.SetInteger("Walk", (int)m_InputX);
+    }
+
+    private void UpdatePocketLight()
+    {
+        if(m_LightIsOn)
+        {
+            m_PocketLight.SetActive(true);
+        }
+        else
+        {
+            m_PocketLight.SetActive(false);
+        }
     }
 }
